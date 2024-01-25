@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96209272B5FC90900B42301 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209262B5FC90900B42301 /* Ingredient.swift */; };
+		C96209282B5FC90900B42301 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209262B5FC90900B42301 /* Ingredient.swift */; };
+		C962092A2B5FD6FC00B42301 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209292B5FD6FC00B42301 /* Ingredients.swift */; };
+		C962092B2B5FD6FC00B42301 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209292B5FD6FC00B42301 /* Ingredients.swift */; };
 		C9D79BEF2B5FC59000CBDAFD /* YummiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */; };
 		C9D79BF12B5FC59000CBDAFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D79BF02B5FC59000CBDAFD /* ContentView.swift */; };
 		C9D79BF32B5FC59200CBDAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D79BF22B5FC59200CBDAFD /* Assets.xcassets */; };
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C96209262B5FC90900B42301 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		C96209292B5FD6FC00B42301 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		C9D79BEB2B5FC59000CBDAFD /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiApp.swift; sourceTree = "<group>"; };
 		C9D79BF02B5FC59000CBDAFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,8 +102,10 @@
 			children = (
 				C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */,
 				C9D79BF02B5FC59000CBDAFD /* ContentView.swift */,
+				C96209262B5FC90900B42301 /* Ingredient.swift */,
 				C9D79BF22B5FC59200CBDAFD /* Assets.xcassets */,
 				C9D79BF42B5FC59200CBDAFD /* Preview Content */,
+				C96209292B5FD6FC00B42301 /* Ingredients.swift */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -257,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C962092A2B5FD6FC00B42301 /* Ingredients.swift in Sources */,
 				C9D79BF12B5FC59000CBDAFD /* ContentView.swift in Sources */,
 				C9D79BEF2B5FC59000CBDAFD /* YummiApp.swift in Sources */,
+				C96209272B5FC90900B42301 /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C96209282B5FC90900B42301 /* Ingredient.swift in Sources */,
+				C962092B2B5FD6FC00B42301 /* Ingredients.swift in Sources */,
 				C9D79C002B5FC59200CBDAFD /* YummiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
