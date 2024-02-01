@@ -37,12 +37,14 @@ struct ContentView: View {
                 TextField("type of food", text: $catogaty)
                     
                 Button("submit"){
-                    self.ingredients.ingredients.append(Ingredient(ingredient: food, quantity: Int(number) ?? 1, units: Units., expiryDate: Date(timeIntervalSinceNow: TimeInterval(((Int(expireDate) ?? 5)*24*60*60))), category: Category.))
-                    food=""
-                    number=""
-                    units=""
-                    expireDate=""
-                    catogaty = ""
+                    if food != ""{
+                        self.ingredients.ingredients.append(Ingredient(ingredient: food, quantity: Int(number) ?? 1, units: Units(rawValue: units) ?? Units.kg, expiryDate: Date(timeIntervalSinceNow: TimeInterval(((Int(expireDate) ?? 5)*24*60*60))), category: Category(rawValue:catogaty) ?? Category.meat))
+                        food=""
+                        number=""
+                        units=""
+                        expireDate=""
+                        catogaty = ""
+                    }
                 }
                 .padding()
                 

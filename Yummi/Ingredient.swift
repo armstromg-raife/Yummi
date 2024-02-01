@@ -41,7 +41,7 @@ struct Ingredient{
         let temp="\(expiryDate)"
         return"""
         \(category.rawValue)
-        \(quantity)\(units.rawValue) of \(ingredient)
+        \(quantity)\(units.rawValue) \(ingredient)
         expiry date: \(temp[..<(temp.firstIndex(of: " ") ?? temp.endIndex)])
         """
     }
