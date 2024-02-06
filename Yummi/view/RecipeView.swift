@@ -11,17 +11,27 @@ import SwiftUI
 
 
 struct RecipeView: View {
+    var recipe:[Recipe]
+    
     var body: some View {
-        Text("hello world")
+        List{
+            ForEach(recipe) { recipe in
+                HStack{
+                    Text(recipe.name)
+                    Text("\(String(format:"%.1f",recipe.rating))/10")
+                }
+            }
+        }
+        
     }
 }
 
 #Preview {
-    RecipeView()
+    RecipeView(recipe: Recipe.examples)
 }
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeView()
+        RecipeView(recipe:Recipe.examples)
     }
 }
