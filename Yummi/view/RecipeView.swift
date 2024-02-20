@@ -26,9 +26,9 @@ struct RecipeView: View {
     }
 }
 
-#Preview {
-    RecipeView(recipe: Recipe.examples)
-}
+//#Preview {
+//    RecipeView(recipe: Recipe.examples)
+//}
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
