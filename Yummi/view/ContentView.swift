@@ -9,8 +9,28 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @State private var selectedView = false
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            if selectedView{
+                Button("Ingredients"){
+                    selectedView=false
+                }
+            }else{
+                Button("Recipes"){
+                    
+                        selectedView=true
+                    
+                }
+            }
+            if selectedView {
+                RecipeView(recipe:Recipe.examples)
+            } else {
+                IngredientsView()
+            }
+        }
     }
 }
 
