@@ -15,20 +15,30 @@ struct ContentView: View {
     var body: some View {
         VStack{
             if selectedView{
-                Button("Ingredients"){
-                    selectedView=false
-                }
+                Text("Recipes")
+                
             }else{
-                Button("Recipes"){
-                    
-                        selectedView=true
-                    
-                }
+                Text("Ingredients")
             }
+            
             if selectedView {
                 RecipeView(recipe:Recipe.examples)
             } else {
                 IngredientsView()
+            }
+            Spacer()
+            if selectedView{
+                Button("Ingredients"){
+                    selectedView=false
+                }
+                .buttonStyle(.borderedProminent)
+            }else{
+                Button("Recipes"){
+                    
+                    selectedView=true
+                    
+                }
+                .buttonStyle(.borderedProminent)
             }
         }
     }

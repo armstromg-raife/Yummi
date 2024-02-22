@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IngredientsView: View {
-    @State private var ingredients=Ingredients()
+    @State var ingredients:[Ingredient]
     @State private var selectedIngredent=0
     @State private var food=""
     @State private var number=""
@@ -20,7 +20,9 @@ struct IngredientsView: View {
         
         Form{
             VStack{
+                
                 Text(self.ingredients.ingredients[selectedIngredent].displayIngredient())
+                
             }
                 Button("next ingredent"){
                     
@@ -59,7 +61,7 @@ struct IngredientsView: View {
 
 struct IngredientsView_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsView()
+        IngredientsView(ingredients:Ingredient.examples)
     }
 }
 

@@ -22,12 +22,16 @@ enum Units: String{
     
 }
 
-struct Ingredient{
+struct Ingredient :Identifiable{
     private let ingredient:String
     private var quantity:Int
     private let units:Units
     private let expiryDate:Date
     private let category:Category
+    
+    var id: Category{
+        category
+    }
     
     init(ingredient: String, quantity: Int, units: Units, expiryDate: Date, category: Category) {
         self.ingredient = ingredient
@@ -45,6 +49,19 @@ struct Ingredient{
         expiry date: \(temp[..<(temp.firstIndex(of: " ") ?? temp.endIndex)])
         """
     }
+    
+    #if DEBUG
+    
+    static func createIngredient(ingredient: String, quantity: Int, units: Units, expiryDate: Date, category: Category)->Ingredient{
+        let Ingredient=Ingredient(ingredient: ingredient, quantity: quantity, units: units, expiryDate: expiryDate, category: category)
+        
+        return Ingredient
+    }
+    
+    static let ingredients=[createIngredient(ingredient: "Bananas", quantity: 2, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 864000), category: Category.fruits), createIngredient(ingredient: "Chicken Breast", quantity: 5, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 172800), category: Category.meat) ,createIngredient(ingredient: "Spinach", quantity: 500, units: Units.grams, expiryDate: Date(timeIntervalSinceNow: 432000), category: Category.vegetables),
+                            createIngredient(ingredient: "Eggs", quantity: 12, units: Units.number, expiryDate: Date(timeIntervalSinceNow: 1728000), category: Category.dairy),
+                            createIngredient(ingredient: "Rice", quantity: 1, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 604800), category: Category.starch)]
+    #endif
     
     
 }
