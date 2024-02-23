@@ -58,7 +58,7 @@ struct Ingredient :Identifiable{
         return Ingredient
     }
     
-    static let ingredients=[createIngredient(ingredient: "Bananas", quantity: 2, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 864000), category: Category.fruits), createIngredient(ingredient: "Chicken Breast", quantity: 5, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 172800), category: Category.meat) ,createIngredient(ingredient: "Spinach", quantity: 500, units: Units.grams, expiryDate: Date(timeIntervalSinceNow: 432000), category: Category.vegetables),
+    static let examples=[createIngredient(ingredient: "Bananas", quantity: 2, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 864000), category: Category.fruits), createIngredient(ingredient: "Chicken Breast", quantity: 5, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 172800), category: Category.meat) ,createIngredient(ingredient: "Spinach", quantity: 500, units: Units.grams, expiryDate: Date(timeIntervalSinceNow: 432000), category: Category.vegetables),
                             createIngredient(ingredient: "Eggs", quantity: 12, units: Units.number, expiryDate: Date(timeIntervalSinceNow: 1728000), category: Category.dairy),
                             createIngredient(ingredient: "Rice", quantity: 1, units: Units.kg, expiryDate: Date(timeIntervalSinceNow: 604800), category: Category.starch)]
     #endif

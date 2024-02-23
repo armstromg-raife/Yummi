@@ -24,7 +24,7 @@ struct ContentView: View {
             if selectedView {
                 RecipeView(recipe:Recipe.examples)
             } else {
-                IngredientsView()
+                IngredientsView(ingredients:Ingredient.examples)
             }
             Spacer()
             if selectedView{

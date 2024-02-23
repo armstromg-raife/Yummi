@@ -4,6 +4,7 @@
 //
 //  Created by Raife Armstrong on 20/2/24.
 //
+import Foundation
 
 import SwiftUI
 
@@ -18,16 +19,26 @@ struct IngredientsView: View {
     
     var body: some View {
         
+
         Form{
-            VStack{
-                
-                Text(self.ingredients.ingredients[selectedIngredent].displayIngredient())
-                
+            List{
+                ForEach(ingredients) { ingredient in
+                    HStack{
+                        
+                        Text(ingredient.displayIngredient())
+                        //Text("\(String(format:"%.1f",ingredient.ingredient))/10")
+                    }
+                }
             }
-                Button("next ingredent"){
-                    
-                    selectedIngredent = (selectedIngredent+1)%self.ingredients.ingredients.count
-            }
+//            VStack{
+//                
+//                Text(self.ingredients.ingredients[selectedIngredent].displayIngredient())
+//                
+//            }
+//                Button("next ingredent"){
+//                    
+//                    selectedIngredent = (selectedIngredent+1)%self.ingredients.ingredients.count
+//            }
             Section{
                 VStack{
                     Text("add ingredents")
@@ -37,21 +48,17 @@ struct IngredientsView: View {
                     TextField("in how long will the food expire", text: $expireDate)
                     TextField("type of food", text: $catogaty)
                 }
-                    Button("submit"){
-                        if food != ""{
-                            self.ingredients.ingredients.append(Ingredient(ingredient: food, quantity: Int(number) ?? 1, units: Units(rawValue: units) ?? Units.kg, expiryDate: Date(timeIntervalSinceNow: TimeInterval(((Int(expireDate) ?? 5)*24*60*60))), category: Category(rawValue:catogaty) ?? Category.meat))
-                            food=""
-                            number=""
-                            units=""
-                            expireDate=""
-                            catogaty = ""
-                            
-                        }
+                Button("submit"){
+                    if food != ""{
+                        self.ingredients.append(Ingredient(ingredient: food, quantity: Int(number) ?? 1, units: Units(rawValue: units) ?? Units.kg, expiryDate: Date(timeIntervalSinceNow: TimeInterval(((Int(expireDate) ?? 5)*24*60*60))), category: Category(rawValue:catogaty) ?? Category.meat))
+                        food=""
+                        number=""
+                        units=""
+                        expireDate=""
+                        catogaty = ""
+                        
                     }
-                    
-                
-                
-               
+                }
             }
         }
     }
@@ -65,8 +72,8 @@ struct IngredientsView_Previews: PreviewProvider {
     }
 }
 
-struct Previews_IngredientsView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
+//struct Previews_IngredientsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+//    }
+//}
