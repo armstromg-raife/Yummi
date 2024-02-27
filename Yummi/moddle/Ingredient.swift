@@ -50,6 +50,12 @@ struct Ingredient :Identifiable{
         """
     }
     
+    func recipeIngredient()->String{
+        return"""
+        \(quantity)\(units.rawValue) \(ingredient)
+"""
+    }
+    
     #if DEBUG
     
     static func createIngredient(ingredient: String, quantity: Int, units: Units, expiryDate: Date, category: Category)->Ingredient{

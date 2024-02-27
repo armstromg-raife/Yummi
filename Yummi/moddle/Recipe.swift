@@ -9,7 +9,7 @@ import Foundation
 
 struct Recipe: Identifiable{
     let name:String
-    let ingredients:Array<Array<Any>>
+    let ingredients: Array<Array<Any>>
     var favourite:Bool
     var rating:Double
     
@@ -24,7 +24,9 @@ struct Recipe: Identifiable{
         self.rating = rating
     }
     
-    
+//    func displayRecipe()->Ingredient{
+//        return ingredients
+//    }
     #if DEBUG
     
     static func createRecipe(name:String, ingredients:Array<Array<Any>>, favourite:Bool, rating:Double)->Recipe{

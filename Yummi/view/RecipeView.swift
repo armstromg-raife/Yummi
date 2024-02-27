@@ -14,11 +14,17 @@ struct RecipeView: View {
     var recipe:[Recipe]
     
     var body: some View {
-        List{
-            ForEach(recipe) { recipe in
-                HStack{
-                    Text(recipe.name)
-                    Text("\(String(format:"%.1f",recipe.rating))/10")
+        NavigationView{
+            List{
+                ForEach(recipe) { recipe in
+                    
+                    
+                    NavigationLink(destination:  RecipeDetailView(recipe:recipe) ){
+                        Text("\(recipe.name ) \(String(format:"%.1f",recipe.rating))/10")
+                    }
+                    
+                    
+                    
                 }
             }
         }

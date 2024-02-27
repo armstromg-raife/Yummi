@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
+    var recipe:Recipe
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form{
+            HStack{
+                Text("\(recipe.name)")
+                Spacer()
+                Text("\(String(format:"%.1f",recipe.rating))")
+            }
+//            List{
+//                
+//                ForEach(recipe.ingredients.count) { ingredients in
+//                    
+//                }
+//            }
+        }
     }
 }
 
-#Preview {
-    RecipeDetailView()
+//#Preview {
+//    RecipeDetailView(recipe:Recipe.examples[0])
+//}
+
+struct RecipeDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecipeDetailView(recipe:Recipe.examples[0])
+    }
 }
