@@ -16,12 +16,12 @@ struct RecipeDetailView: View {
                 Spacer()
                 Text("\(String(format:"%.1f",recipe.rating))")
             }
-//            List{
-//                
-//                ForEach(recipe.ingredients.count) { ingredients in
-//                    
-//                }
-//            }
+            List{
+                
+                ForEach(recipe.displayRecipe()) { ingredient in
+                    Text("\(ingredient.recipeIngredient())")
+                }
+            }
         }
     }
 }

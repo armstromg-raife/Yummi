@@ -13,6 +13,7 @@
 		C962092A2B5FD6FC00B42301 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209292B5FD6FC00B42301 /* Ingredients.swift */; };
 		C962092B2B5FD6FC00B42301 /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96209292B5FD6FC00B42301 /* Ingredients.swift */; };
 		C96E49182B8DF00000D21679 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96E49172B8DF00000D21679 /* RecipeDetailView.swift */; };
+		C99C2AED2B90B45000D7CAE5 /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99C2AEC2B90B45000D7CAE5 /* IngredientsViewModel.swift */; };
 		C9D79BEF2B5FC59000CBDAFD /* YummiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */; };
 		C9D79BF12B5FC59000CBDAFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D79BF02B5FC59000CBDAFD /* ContentView.swift */; };
 		C9D79BF32B5FC59200CBDAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D79BF22B5FC59200CBDAFD /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		C96209262B5FC90900B42301 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C96209292B5FD6FC00B42301 /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
 		C96E49172B8DF00000D21679 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		C99C2AEC2B90B45000D7CAE5 /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
 		C9D79BEB2B5FC59000CBDAFD /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiApp.swift; sourceTree = "<group>"; };
 		C9D79BF02B5FC59000CBDAFD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C99C2AE92B90B41D00D7CAE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C99C2AEC2B90B45000D7CAE5 /* IngredientsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9D79BE22B5FC59000CBDAFD = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		C9D79BED2B5FC59000CBDAFD /* Yummi */ = {
 			isa = PBXGroup;
 			children = (
+				C99C2AE92B90B41D00D7CAE5 /* ViewModel */,
 				C9E24DB42B6D55A300383009 /* view */,
 				C9E24DB22B6D557900383009 /* moddle */,
 				C9D79BEE2B5FC59000CBDAFD /* YummiApp.swift */,
@@ -295,6 +306,7 @@
 			files = (
 				C962092A2B5FD6FC00B42301 /* Ingredients.swift in Sources */,
 				C9D79BF12B5FC59000CBDAFD /* ContentView.swift in Sources */,
+				C99C2AED2B90B45000D7CAE5 /* IngredientsViewModel.swift in Sources */,
 				C9E24DB62B6D55F900383009 /* RecipeView.swift in Sources */,
 				0B7954CA2B84BF5C00EDDF0A /* IngredientsView.swift in Sources */,
 				C9E24DB82B6D577B00383009 /* Recipe.swift in Sources */,
@@ -473,7 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,7 +514,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

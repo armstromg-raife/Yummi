@@ -9,20 +9,21 @@ import Foundation
 import SwiftUI
 
 struct IngredientsView: View {
-    @State var ingredients:[Ingredient]
-    @State private var selectedIngredent=0
-    @State private var food=""
-    @State private var number=""
-    @State private var units=""
-    @State private var expireDate=""
-    @State private var catogaty = ""
+    @State var ingredientsViewModel: IngredientsViewModel=IngredientsViewModel()
+//    @State var ingredients:[Ingredient]
+//    @State private var selectedIngredent=0
+//    @State private var food=""
+//    @State private var number=""
+//    @State private var units=""
+//    @State private var expireDate=""
+//    @State private var catogaty = ""
     
     var body: some View {
         
 
         Form{
             List{
-                ForEach(ingredients) { ingredient in
+                ForEach(ingredientsViewModel.ingredients) { ingredient in
                     HStack{
                         
                         Text(ingredient.displayIngredient())
@@ -42,20 +43,15 @@ struct IngredientsView: View {
             Section{
                 VStack{
                     Text("add ingredents")
-                    TextField("ingredient", text: $food)
-                    TextField("quantity", text: $number)
-                    TextField("units", text: $units)
-                    TextField("in how long will the food expire", text: $expireDate)
-                    TextField("type of food", text: $catogaty)
+                    TextField("ingredient", text: $ingredientsViewModel.food)
+                    TextField("quantity", text: $ingredientsViewModel.number)
+                    TextField("units", text: $ingredientsViewModel.units)
+                    TextField("in how long will the food expire", text: $ingredientsViewModel.expireDate)
+                    TextField("type of food", text: $ingredientsViewModel.catogaty)
                 }
                 Button("submit"){
-                    if food != ""{
-                        self.ingredients.append(Ingredient(ingredient: food, quantity: Int(number) ?? 1, units: Units(rawValue: units) ?? Units.kg, expiryDate: Date(timeIntervalSinceNow: TimeInterval(((Int(expireDate) ?? 5)*24*60*60))), category: Category(rawValue:catogaty) ?? Category.meat))
-                        food=""
-                        number=""
-                        units=""
-                        expireDate=""
-                        catogaty = ""
+                    if ingredientsViewModel.food != ""{
+                        ingredientsViewModel.addNewIngredient()
                         
                     }
                 }
@@ -68,7 +64,8 @@ struct IngredientsView: View {
 
 struct IngredientsView_Previews: PreviewProvider {
     static var previews: some View {
-        IngredientsView(ingredients:Ingredient.examples)
+        IngredientsView()
+            
     }
 }
 

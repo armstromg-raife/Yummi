@@ -13,34 +13,46 @@ struct ContentView: View {
     
     
     var body: some View {
-        VStack{
-            if selectedView{
-                Text("Recipes")
-                
-            }else{
-                Text("Ingredients")
-            }
-            
-            if selectedView {
-                RecipeView(recipe:Recipe.examples)
-            } else {
-                IngredientsView(ingredients:Ingredient.examples)
-            }
-            Spacer()
-            if selectedView{
-                Button("Ingredients"){
-                    selectedView=false
+        TabView{
+            IngredientsView()
+                .tabItem {
+                    Image(systemName: "cart")
+                    Text("Ingredients")
                 }
-                .buttonStyle(.borderedProminent)
-            }else{
-                Button("Recipes"){
-                    
-                    selectedView=true
-                    
+            RecipeView(recipe:Recipe.examples)
+                .tabItem {
+                    Image(systemName: "doc.plaintext")
+                    Text("Recipes")
                 }
-                .buttonStyle(.borderedProminent)
-            }
         }
+//        VStack{
+//            if selectedView{
+//                Text("Recipes")
+//                
+//            }else{
+//                Text("Ingredients")
+//            }
+//            
+//            if selectedView {
+//                RecipeView(recipe:Recipe.examples)
+//            } else {
+//                IngredientsView()
+//            }
+//            Spacer()
+//            if selectedView{
+//                Button("Ingredients"){
+//                    selectedView=false
+//                }
+//                .buttonStyle(.borderedProminent)
+//            }else{
+//                Button("Recipes"){
+//                    
+//                    selectedView=true
+//                    
+//                }
+//                .buttonStyle(.borderedProminent)
+//            }
+//        }
     }
 }
 

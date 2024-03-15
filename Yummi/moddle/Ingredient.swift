@@ -19,6 +19,7 @@ enum Units: String{
     case number=""
     case kg="kg of"
     case grams="g of"
+    case ml="ml of"
     
 }
 
@@ -29,8 +30,8 @@ struct Ingredient :Identifiable{
     private let expiryDate:Date
     private let category:Category
     
-    var id: Category{
-        category
+    var id: String{
+        ingredient
     }
     
     init(ingredient: String, quantity: Int, units: Units, expiryDate: Date, category: Category) {
